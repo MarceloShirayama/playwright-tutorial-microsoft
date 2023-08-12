@@ -1,7 +1,9 @@
 import { test, expect } from "@playwright/test";
 
+const baseUrl = String(process.env.CONTOSOTRADERS_URL);
+
 test("test", async ({ page }) => {
-  await page.goto("https://production.contosotraders.com/");
+  await page.goto(baseUrl);
   await page
     .getByPlaceholder("Search by product name or search by image")
     .click();

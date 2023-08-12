@@ -1,14 +1,16 @@
 import { test, expect } from "@playwright/test";
 
+const baseUrl = String(process.env.PLAYWRIGHT_URL);
+
 test("has title", async ({ page }) => {
-  await page.goto("https://playwright.dev/");
+  await page.goto(baseUrl);
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Playwright/);
 });
 
 test("get started link", async ({ page }) => {
-  await page.goto("https://playwright.dev/");
+  await page.goto(baseUrl);
 
   // Click the get started link.
   await page.getByRole("link", { name: "Get started" }).click();
