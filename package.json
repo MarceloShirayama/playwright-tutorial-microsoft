@@ -1,0 +1,15 @@
+{
+  "name": "playwright-tutorial-microsoft",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:ui": "npx playwright test --ui"
+  },
+  "keywords": [],
+  "author": "Marcelo Shirayama",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.37.0"
+  }
+}
